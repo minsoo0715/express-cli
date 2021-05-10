@@ -12,7 +12,7 @@
     "build": "tsc -p .",
     "local": "sudo npm i -g && ex-cli",
     "refresh": "rm -rf ./node_modules ./package-lock.json && npm install",
-    "createlocal" : "npm run create && npm run local"
+    "debug" : "npm run create && npm run local"
   },
   "author": "whiteb",
   "license": "MIT",

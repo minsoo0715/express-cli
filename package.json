@@ -4,7 +4,7 @@
   "description": "express-cli project",
   "main": "./lib/index.js",
   "bin": {
-    "ex-cli": "lib/index.js"
+    "ex-cli": "./lib/index.js"
   },
   "scripts": {
     "start": "nodemon --watch 'src/**/*.ts' --exec 'ts-node' src/index.ts",

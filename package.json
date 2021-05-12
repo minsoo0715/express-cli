@@ -1,7 +1,7 @@
 {
-  "name": "ex-cli",
+  "name": "@minsoo0715/ex-cli",
   "version": "0.0.1",
-  "description": "express-cli project",
+  "description": "express template generating CLI project",
   "main": "./lib/index.js",
   "bin": {
     "ex-cli": "./lib/index.js"
@@ -31,9 +31,12 @@
     "typescript": "^4.2.4"
   },
   "directories": {
-    "lib": "lib",
-    "test": "test"
+    "lib": "lib"
   },
+  "files": [
+    "lib",
+    "src"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/minsoo0715/express-cli.git"

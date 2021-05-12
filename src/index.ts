@@ -5,6 +5,7 @@ const figlet = require('figlet');
 const path = require('path');
 const program = require('commander');
 const shell = require('shelljs')
+import {template} from './url';
 
 clear();
 console.log(
@@ -25,26 +26,16 @@ if(args.length != 2) {
     process.exit(0)
 }    
 
-interface temp_interface {
-    [key:string]: string;
-}
-
 const options = program.opts();
-const temp: temp_interface = {
-    ejs : 'express-ejs--template.git'
-};
+
 let temp_name:string = args[0];
 let set_name:string = args[1];
-let url:string = temp[temp_name];
+let url:string = template[temp_name];
 
-if(set_name === undefined || url === undefined) {
-    console.error("arguments lack err")
-    process.exit(1);
-}
+
     
     const cmd:string = 'git clone https://github.com/minsoo0715/'+url + ' ' + set_name
     shell.exec(cmd);
-
-if (!process.argv.slice(2).length) {
+if (process.argv.slice(2).length != 2) {
   program.outputHelp();
-}
+} 

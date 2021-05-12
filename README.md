@@ -4,6 +4,7 @@
 
 
 ```bash
+$ cd my_workspace
 $ ex-cli <template-name> <set-name>
 ```
 

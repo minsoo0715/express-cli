@@ -34,8 +34,14 @@ let url:string = template[temp_name];
 
 
     
-    const cmd:string = 'git clone https://github.com/minsoo0715/'+url + ' ' + set_name
-    shell.exec(cmd);
+    let cmd:string = 'git clone https://github.com/minsoo0715/'+url + ' ' + set_name
+    let a = shell.exec(cmd);
+    if(a.code == 0) {
+      cmd = 'rm -rf ' + './' + set_name + '/.git'
+      shell.exec(cmd);
+    }
+
+
 if (process.argv.slice(2).length != 2) {
   program.outputHelp();
 } 

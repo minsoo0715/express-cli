@@ -16,7 +16,9 @@ console.log(
 
 program
   .version('0.0.2')
+  .usage('[template-name] [own-name] [option]')
   .description("express CLI")
+  .option('-l --language <lan>', 'set language mode(js/ts)')
   .parse(process.argv);
 
 let args:Array<string> = program.args;
@@ -27,21 +29,30 @@ if(args.length != 2) {
 }    
 
 const options = program.opts();
+let lang:string = '';
+if(options.language == 'js' || options.language == undefined) {
+  lang = 'js';
+}else if(options.language == 'ts') {
+  lang = 'ts';
+}else {
+  program.outputHelp();
+  process.exit(1);
+}
 
 let temp_name:string = args[0];
-let set_name:string = args[1];
-let url:string = template[temp_name];
+let set_name:string = args[1];  
+let url:string = template[temp_name][lang];
 
 
     
     let cmd:string = 'git clone https://github.com/minsoo0715/'+url + ' ' + set_name
-    let a = shell.exec(cmd);
-    if(a.code == 0) {
+    let execute = shell.exec(cmd);
+    if(execute.code == 0) {
       cmd = 'rm -rf ' + './' + set_name + '/.git'
-      shell.exec(cmd);
+      execute = shell.exec(cmd);
+      if(execute.code != 0) {
+        console.error('error : ', execute.stderr);
+      }
     }
 
-
-if (process.argv.slice(2).length != 2) {
-  program.outputHelp();
-} 
+ 

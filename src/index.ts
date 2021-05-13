@@ -15,7 +15,7 @@ console.log(
 );
 
 program
-  .version('0.0.2')
+  .version('1.0.0')
   .usage('[template-name] [own-name] [option]')
   .description("express CLI")
   .option('-l --language <lan>', 'set language mode(js/ts)')

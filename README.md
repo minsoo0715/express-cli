@@ -8,6 +8,8 @@ $ cd my_workspace
 $ ex-cli <template-name> <set-name>
 ```
 
+recent template-name : ejs(ts/js)
+
 ## Installation
 ```bash
  $ npm install -g ex-cli

@@ -8,11 +8,11 @@
   },
   "scripts": {
     "start": "nodemon --watch 'src/**/*.ts' --exec 'ts-node' src/index.ts",
-    "create": "npm run build && npm run test",
+    "create": "yarn run build",
     "build": "tsc -p .",
-    "local": "sudo npm i -g && ex-cli",
-    "refresh": "rm -rf ./node_modules ./package-lock.json && npm install",
-    "debug": "npm run create && npm run local"
+    "local": "sudo yarn global add && ex-cli",
+    "refresh": "rm -rf ./node_modules ./package-lock.json && yarn install",
+    "debug": "yarn run create && yarn run local"
   },
   "author": "whiteb",
   "license": "MIT",

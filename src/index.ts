@@ -5,6 +5,7 @@ const figlet = require('figlet');
 const path = require('path');
 const program = require('commander');
 const shell = require('shelljs')
+import { OptionValues } from 'commander';
 import {template} from './url';
 
 clear();
@@ -28,9 +29,9 @@ if(args.length != 2) {
     process.exit(0)
 }    
 
-const options = program.opts();
+const options:OptionValues = program.opts();
 let lang:string = '';
-if(options.language == 'js' || options.language == undefined) {
+if(options.language  == 'js' || options.language == undefined) {
   lang = 'js';
 }else if(options.language == 'ts') {
   lang = 'ts';

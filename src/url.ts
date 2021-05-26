@@ -1,4 +1,4 @@
-import {temp_interface} from './type/type'
+import {temp_interface} from './interface/template'
 
 
 export const template: temp_interface = {

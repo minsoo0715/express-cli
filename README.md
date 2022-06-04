@@ -5,7 +5,7 @@
 
 ```bash
 $ cd my_workspace
-$ ex-cli <template-name> <set-name>
+$ ex-cli <template-name> <set-name> -l <ts | js>
 ```
 
 recent template-name : ejs(ts/js)

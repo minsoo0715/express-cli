@@ -1,9 +1,2 @@
-import {temp_interface} from './interface/template'
-
-
-export const template: temp_interface = {
-    ejs: {
-        js:'express-ejs--template.git',
-        ts: 'express-ejs--template-ts.git'
-    }
-}
+const url: string = `https://github.com/minsoo0715/express_template.git`;
+export default url;

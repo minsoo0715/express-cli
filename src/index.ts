@@ -84,18 +84,3 @@ shell.exec(`mkdir ${set_name}`, (code, stdout, stderr) => {
     }
   );
 });
-// shell.exec(
-//   `git clone https://github.com/minsoo0715/${url} ${set_name}`,
-//   (code, stdout, stderr) => {
-//     if (code != 0) {
-//       console.error("error : ", stderr);
-//       return;
-//     }
-//     shell.exec(`rm -rf ./${set_name}/.git`, (code, stdout, stderr) => {
-//       if (code != 0) {
-//         console.error("error : ", stderr);
-//         return;
-//       }
-//     });
-//   }
-// );

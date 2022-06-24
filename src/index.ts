@@ -73,7 +73,7 @@ shell.exec(`mkdir ${set_name}`, (code, stdout, stderr) => {
                   return;
                 }
                 shell.cd("../")
-                shell.exec(`mv ./${set_name}/${temp_name}/${lang}/* ./${set_name} && mv ./${set_name}/${temp_name}/${lang}/.gitignore ./${set_name}/.gitignore && rm -rf ./${set_name}/${temp_name} ./${set_name}/.git`, (code, stdout, stderr) => {
+                shell.exec(`mv ./${set_name}/${temp_name}/${lang}/* ./${set_name} && rm -rf ./${set_name}/${temp_name} ./${set_name}/.git`, (code, stdout, stderr) => {
                   return;
                 })
               });

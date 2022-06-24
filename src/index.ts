@@ -3,7 +3,6 @@ import chalk from "chalk";
 import program from "commander";
 import { OptionValues } from "commander";
 import url from "./url";
-import path from "path";
 
 import shell from "shelljs";
 const clear = require("clear");
@@ -14,7 +13,7 @@ console.log(
   chalk.white(figlet.textSync("ex-cli", { horizontalLayout: "full" }))
 );
 program
-  .version("2.0.0")
+  .version("2.0.1")
   .usage("[template-name] [own-name] [option]")
   .description("express CLI")
   .option("-l --language <lan>", "set language mode(js/ts)")
